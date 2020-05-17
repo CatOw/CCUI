@@ -4,7 +4,7 @@ from help import helpMain as help
 from help import helpCommand
 from leave import shutdown
 from reset import programReboot as reboot
-from tools import main as tool
+import tools
 import lsLinkGen as lightshot
 
 
@@ -28,7 +28,7 @@ def main():
 
         if consoleInputLen > 1 and oldConsoleInput in commandsList:
             if consoleInput[0] == "tool":
-                tool(consoleInput[1])
+                tools.main(consoleInput[1])
 
             if consoleInput[0] == "help":
                 helpCommand(consoleInput[1])
