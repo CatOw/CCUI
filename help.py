@@ -1,3 +1,6 @@
+import tools
+
+
 shutdownHelp = "shutdown       Shuts down the terminal."
 toolHelp = "tool           Activate and use a tool or a program."
 rebootHelp = "reboot         Restart the program."
@@ -19,4 +22,5 @@ def helpTool(tool):
     print("\nFor more information about specific commands type 'help command-name'.\n")
 
     if tool == "lightshot":
-        print("generate number     Generate a given amount of Lightshot Links to access images.\n")
+        print("generate {number}     Generate a given amount of Lightshot Links to access images.\n")
+        tools.main("lightshot")
